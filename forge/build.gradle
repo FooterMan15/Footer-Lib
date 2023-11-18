@@ -1,5 +1,26 @@
 plugins {
     id "com.github.johnrengelman.shadow" version "7.1.2"
+    id "com.modrinth.minotaur" version "2.+"
+}
+
+Properties properties = new Properties()
+def propertiesFile = project.rootProject.file('local.properties')
+if (propertiesFile.exists()) {
+    properties.load(propertiesFile.newDataInputStream())
+}
+def mr_token = properties.getProperty("modrinth.token")
+
+modrinth {
+    token = mr_token
+    projectId = rootProject.projectid
+    uploadFile = jar
+    versionNumber = rootProject.mod_version + "-forge-" + rootProject.minecraft_version
+    changelog = rootProject.file("./CHANGELOG.md").text
+    gameVersions = ["1.19.2"]
+    loaders = ["forge"]
+    dependencies {
+        required.project("architectury-api")
+    }
 }
 
 architectury {

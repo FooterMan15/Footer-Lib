@@ -3,8 +3,16 @@ plugins {
     id "com.modrinth.minotaur" version "2.+"
 }
 
+Properties properties = new Properties()
+def propertiesFile = project.rootProject.file('local.properties')
+if (propertiesFile.exists()) {
+    properties.load(propertiesFile.newDataInputStream())
+}
+def mr_token = properties.getProperty("modrinth.token")
+
+
 modrinth {
-    token = System.getenv("MODRINTH_TOKEN")
+    token = mr_token
     projectId = "VdGqA5r3"
     uploadFile = remapJar
     versionNumber = rootProject.mod_version + "-fabric-" + rootProject.minecraft_version
