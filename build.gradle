@@ -16,7 +16,6 @@ subprojects {
 
     dependencies {
         minecraft "com.mojang:minecraft:${rootProject.minecraft_version}"
-        implementation('com.github.FooterMan15:Repo:Tag')
         mappings loom.layered() {
             officialMojangMappings()
             parchment("org.parchmentmc.data:parchment-${minecraft_version}:${parchment_version}@zip")
@@ -51,12 +50,5 @@ allprojects {
 
     java {
         withSourcesJar()
-    }
-    dependencyResolutionManagement {
-        repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
-        repositories {
-            mavenCentral()
-            maven { url 'https://jitpack.io' }
-        }
     }
 }

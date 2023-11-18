@@ -4,30 +4,30 @@ loaderVersion = "[43,)"
 license = "Insert License Here"
 
 [[mods]]
-modId = "examplemod"
+modId = "footerlib"
 version = "${version}"
-displayName = "Example Mod"
-authors = "Me!"
+displayName = "Footer Lib"
+authors = "FooterMan"
 description = '''
-This is an example description! Tell everyone what your mod is about!
+Library for Footer's Mods.
 '''
-#logoFile = ""
+logoFile = "icon.png"
 
-[[dependencies.examplemod]]
+[[dependencies.footerlib]]
 modId = "forge"
 mandatory = true
 versionRange = "[43,)"
 ordering = "NONE"
 side = "BOTH"
 
-[[dependencies.examplemod]]
+[[dependencies.footerlib]]
 modId = "minecraft"
 mandatory = true
 versionRange = "[1.19.2,)"
 ordering = "NONE"
 side = "BOTH"
 
-[[dependencies.examplemod]]
+[[dependencies.footerlib]]
 modId = "architectury"
 mandatory = true
 versionRange = "[6.5.85,)"

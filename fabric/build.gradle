@@ -1,5 +1,20 @@
 plugins {
     id "com.github.johnrengelman.shadow" version "7.1.2"
+    id "com.modrinth.minotaur" version "2.+"
+}
+
+modrinth {
+    token = System.getenv("MODRINTH_TOKEN")
+    projectId = "VdGqA5r3"
+    uploadFile = remapJar
+    versionNumber = rootProject.mod_version + "-fabric-" + rootProject.minecraft_version
+    changelog = rootProject.file("./CHANGELOG.md").text
+    gameVersions = ["1.19.2"]
+    loaders = ["fabric"]
+    dependencies {
+        required.project("fabric-api")
+        required.project("architectury-fabric")
+    }
 }
 
 architectury {
