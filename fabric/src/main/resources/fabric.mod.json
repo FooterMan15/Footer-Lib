@@ -20,7 +20,6 @@
     ]
   },
   "mixins": [
-    "footerlib.mixins.json",
     "footerlib.mixins.json"
   ],
   "depends": {
