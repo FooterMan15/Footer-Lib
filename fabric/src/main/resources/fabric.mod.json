@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "footerlib",
+  "version": "${version}",
+  "name": "FooterLib",
+  "description": "Shared code for Footer's mods.",
+  "authors": [
+    "FooterMan"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+  "license": "GPL-3.0",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "io.github.footerlib.fabric.FooterLibFabric"
+    ]
+  },
+  "depends": {
+    "fabric": "*",
+    "minecraft": ">=1.20.1"
+  }
+}

@@ -1,0 +1,28 @@
+modLoader = "javafml"
+loaderVersion = "[47,)"
+#issueTrackerURL = ""
+license = "GPL-3.0"
+
+[[mods]]
+modId = "footerlib"
+version = "${version}"
+displayName = "FooterLib"
+authors = "FooterMan"
+description = '''
+Shared code for Footer's Mods
+'''
+#logoFile = ""
+
+[[dependencies.footerlib]]
+modId = "forge"
+mandatory = true
+versionRange = "[47,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.footerlib]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[1.20.1,)"
+ordering = "NONE"
+side = "BOTH"
