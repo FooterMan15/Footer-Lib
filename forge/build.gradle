@@ -88,3 +88,26 @@ unifiedPublishing {
         }
     }
 }
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            artifactId = rootProject.archives_base_name + "-" + project.name
+            from components.java
+        }
+    }
+
+    repositories {
+        maven {
+            name = "cloudsmith"
+            url = "https://maven.cloudsmith.io/footers-mods/footers-mods/"
+            def releasesRepoUrl = "https://maven.cloudsmith.io/footers-mods/footers-mods/"
+            def snapshotsRepoUrl = "https://maven.cloudsmith.io/footers-mods/footers-mods/"
+            url = version.endsWith('SNAPSHOT') ? snapshotsRepoUrl : releasesRepoUrl
+            credentials {
+                username = 'footer-man'
+                password = "${env.fetch("MV_TOK")}"
+            }
+        }
+    }
+}

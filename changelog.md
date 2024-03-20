@@ -1,1 +1,1 @@
-* Added custom Registry, Supplier classes.
+* Hotfix
