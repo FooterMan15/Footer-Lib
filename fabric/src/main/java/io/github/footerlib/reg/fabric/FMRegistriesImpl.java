@@ -1,5 +1,6 @@
-package io.github.footerlib.fabric.reg;
+package io.github.footerlib.reg.fabric;
 
+import io.github.footerlib.common.reg.fabric.FabricRegistry;
 import io.github.footerlib.reg.FMReg;
 import net.minecraft.core.Registry;
 

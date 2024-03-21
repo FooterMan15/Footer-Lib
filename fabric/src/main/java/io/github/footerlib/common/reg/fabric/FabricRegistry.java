@@ -1,4 +1,4 @@
-package io.github.footerlib.fabric.reg;
+package io.github.footerlib.common.reg.fabric;
 
 import io.github.footerlib.reg.FMReg;
 import io.github.footerlib.reg.RegEntries;

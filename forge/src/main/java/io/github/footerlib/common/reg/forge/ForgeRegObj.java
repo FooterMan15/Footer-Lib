@@ -1,4 +1,4 @@
-package io.github.footerlib.forge.reg;
+package io.github.footerlib.common.reg.forge;
 
 import io.github.footerlib.reg.RegObj;
 import net.minecraft.resources.ResourceLocation;
